@@ -110,5 +110,18 @@ class VowelReverseTest < Minitest::Test
     assert_equal "H*ll* W*rld H*LL* W*RLD", starred.star
   end
 
+  def test_back_vowels_returns_reversed_string_of_only_vowels
+    vowels = VowelReverse.new("AEIOUaeiou")
+    vowels.back_vowels
+    assert_equal "uoieaUOIEA", vowels.back_vowels
+  end
+
+  def test_solve
+    solved = VowelReverse.new("Hello World!")
+    solved.solve
+    assert_equal "Hollo Werld!", solved.solve
+  end
+
+
 
 end
