@@ -43,6 +43,7 @@ class VowelReverseTest < Minitest::Test
   end
 
   def test_it_returns_the_a_in_ha
+    # skip
     reverse = VowelReverse.new("HA")
     reverse.vowel_strip
     assert_equal "A", reverse.vowel_strip
@@ -63,15 +64,24 @@ class VowelReverseTest < Minitest::Test
   end
 
   def test_it_can_return_anycase_vowels
+    # skip
     reverse = VowelReverse.new("uaEE")
     reverse.vowel_strip
     assert_equal "uaEE", reverse.vowel_strip
   end
 
   def test_it_really_returns_any_vowels
+    # skip
     reverse = VowelReverse.new("aaUUUNngnanIIOEeeaahhiiIsI")
     reverse.vowel_strip
     assert_equal "aaUUUaIIOEeeaaiiII", reverse.vowel_strip
+  end
+
+  def test_gimme_a_b
+    # skip
+    reverse = VowelReverse.new("BEe")
+    reverse.cons_strip
+    assert_equal "B", reverse.cons_strip
   end
 
 end
