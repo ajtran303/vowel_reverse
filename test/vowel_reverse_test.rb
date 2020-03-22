@@ -42,4 +42,36 @@ class VowelReverseTest < Minitest::Test
     assert_equal "Hello World", reverse.str
   end
 
+  def test_it_returns_the_a_in_ha
+    reverse = VowelReverse.new("HA")
+    reverse.vowel_strip
+    assert_equal "A", reverse.vowel_strip
+  end
+
+  def test_it_returns_two_vowels
+    # skip
+    reverse = VowelReverse.new("HAA")
+    reverse.vowel_strip
+    assert_equal "AA", reverse.vowel_strip
+  end
+
+  def test_it_returns_arbit_vowels
+    # skip
+    reverse = VowelReverse.new("UAJJEINN")
+    reverse.vowel_strip
+    assert_equal "UAEI", reverse.vowel_strip
+  end
+
+  def test_it_can_return_anycase_vowels
+    reverse = VowelReverse.new("uaEE")
+    reverse.vowel_strip
+    assert_equal "uaEE", reverse.vowel_strip
+  end
+
+  def test_it_really_returns_any_vowels
+    reverse = VowelReverse.new("aaUUUNngnanIIOEeeaahhiiIsI")
+    reverse.vowel_strip
+    assert_equal "aaUUUaIIOEeeaaiiII", reverse.vowel_strip
+  end
+
 end
