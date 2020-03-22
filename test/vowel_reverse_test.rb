@@ -91,5 +91,24 @@ class VowelReverseTest < Minitest::Test
     assert_equal "Nngnnhhs", reverse.cons_strip
   end
 
+  def test_vowels_are_replaced_with_stars
+    starred = VowelReverse.new("Hello World")
+    starred.vowel_star
+    assert_equal "H*ll* W*rld", starred.vowel_star
+  end
+
+  def test_vowels_of_anycase_replaced_with_stars
+    starred = VowelReverse.new("Hello World HELLO WORLD")
+    starred.vowel_star
+    assert_equal "H*ll* W*rld H*LL* W*RLD", starred.vowel_star
+  end
+
+  def test_call_star_returns_string_with_starred_vowels
+    # skip
+    starred = VowelReverse.new("Hello World HELLO WORLD")
+    starred.star
+    assert_equal "H*ll* W*rld H*LL* W*RLD", starred.star
+  end
+
 
 end
