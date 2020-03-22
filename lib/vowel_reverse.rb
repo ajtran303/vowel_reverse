@@ -16,5 +16,8 @@ class VowelReverse
     vowels = @str.scan(/[aeiou]/i).join
   end
 
+  def cons_strip
+    cons = @str.scan(/[^aeiou]/i).join
+  end
 
 end

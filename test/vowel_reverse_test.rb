@@ -84,4 +84,12 @@ class VowelReverseTest < Minitest::Test
     assert_equal "B", reverse.cons_strip
   end
 
+  def test_it_really_returns_any_consonants
+    # skip
+    reverse = VowelReverse.new("aaUUUNngnanIIOEeeaahhiiIsI")
+    reverse.cons_strip
+    assert_equal "Nngnnhhs", reverse.cons_strip
+  end
+
+
 end
