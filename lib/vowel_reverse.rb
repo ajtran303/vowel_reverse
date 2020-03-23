@@ -1,4 +1,10 @@
 # Iteration 4: delete everything and do it again!
+# Iteration 5? https://launchschool.com/books/oo_ruby/read/classes_and_objects_part2
+# Does this class need to instantiate new objects?
+# What if this was just one class method?
+
+# https://thoughtbot.com/blog/meditations-on-a-class-method
+# write a beautiful class method: "instantiate the class then call a method on the instance."
 
 class VowelReverse
   attr_reader :str
